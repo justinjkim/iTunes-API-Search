@@ -29,6 +29,7 @@ function callback(e) {
 			else {
 				response.json()
 					.then(function(data) {
+						main.innerHTML = "";
 						let data_copy = data.results;
 
 						data_copy.map((content) => {
