@@ -5,6 +5,20 @@ body {
 
 h1 {
 	text-align: center;
+	font-size: 2em;
+	padding: 20px;
+}
+
+form {
+	padding: 15px;
+}
+
+form input[type="text"] {
+	height: 30px;
+}
+
+form input[type="submit"] {
+	padding: 5px 10px;
 }
 
 main {
