@@ -1,7 +1,7 @@
 console.log("Talking...");
 
 let url = "https://itunes.apple.com/search?term="
-let limit = "&limit=20";
+let limit = "&limit=15";
 let media = "&media=music"
 
 let main = document.querySelector("main");
