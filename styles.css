@@ -15,10 +15,12 @@ form {
 
 form input[type="text"] {
 	height: 30px;
+	width: 100%;
 }
 
 form input[type="submit"] {
 	padding: 5px 10px;
+	margin-top: 10px;
 }
 
 main {
@@ -27,17 +29,24 @@ main {
 	justify-content: flex-start;
 }
 
+main p {
+	padding: 10px;
+}
+
 main div {
 	height: 200px;
 	background-color: white;
 	border: 1px solid grey;
-	box-shadow: 3px 3px 3px #ddd;
+	box-shadow: 5px 5px 5px #ddd;
 	margin: 10px;
 	padding: 10px;
+	border-radius: 10px;
 }
 
 main div h4 {
 	text-align: center;
+	padding-top: 10px;
+	font-size: 1.3em;
 }
 
 main div a {
@@ -50,9 +59,21 @@ main div img {
 	margin: 0 auto;
 	display: block;
 	clear: both;
+	padding-bottom: 20px;
 }
 
 
+/* tablet */
+@media (min-width: 768px) {
+	main {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	main div {
+		width: 40%;
+	}
+}
 
 
 /* desktop */
@@ -62,3 +83,4 @@ main div img {
 		flex-wrap: wrap;
 	}
 }
+
