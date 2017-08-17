@@ -34,37 +34,27 @@ function callback(e) {
 						let aud = document.getElementById("aud");
 						let aud_wrapper = document.getElementById("aud_wrapper");
 
-
+						// map function
 						data_copy.map((content) => {
+							//create the div wrapper for each search result
 							let profile = document.createElement("div");
 							let profile_img = document.createElement("img");
 							profile.appendChild(profile_img);
 							profile_img.setAttribute("src", `${content.artworkUrl100}`);
 
+							// changes the audio src dynamically when you click on the image
 							profile_img.addEventListener("click", function() {
 								aud.setAttribute("src", `${content.previewUrl}`);
 								aud_wrapper.load();
 								aud_wrapper.play();
 							})
 
-							
-
-
-
-
-
-
-
-
-							
-
+						
 
 							let profile_song = document.createElement("a");
 							profile_song.setAttribute("href", `${content.trackViewUrl}`);
 							profile_song.innerHTML = `${content.trackName}`;
 							profile.appendChild(profile_song);
-
-
 
 
 							let profile_artist = document.createElement("h4");
@@ -74,17 +64,6 @@ function callback(e) {
 							main.appendChild(profile);
 						}) // end of map function
 
-						// let results = document.querySelectorAll("div");
-						// for (let i = 0; i < results.length; i++) {
-						// 	results[i].addEventListener("click", function(e) {
-						// 		if (e.target && e.target.nodeName === "IMG") {
-						// 			aud.setAttribute("src", "piano.m4a");
-						// 			aud_wrapper.load();
-						// 			aud_wrapper.play();
-
-						// 		}	
-						// 	})
-						// }
 						
 
 					} // end of .then(function(data))
