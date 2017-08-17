@@ -9,18 +9,29 @@ h1 {
 	padding: 20px;
 }
 
+#aud_wrapper {
+	display: block;
+	margin: 0 auto;
+}
+
 form {
 	padding: 15px;
 }
 
 form input[type="text"] {
 	height: 30px;
-	width: 100%;
+	width: 80%;
+	padding: 5px 10px;
+	border: none;
+	border-bottom: 1px solid red;
+	outline: none;
 }
 
 form input[type="submit"] {
 	padding: 5px 10px;
 	margin-top: 10px;
+	border: 1px black solid;
+	border-radius: 5px;
 }
 
 main {
@@ -60,11 +71,12 @@ main div img {
 	display: block;
 	clear: both;
 	padding-bottom: 20px;
+	cursor: pointer;
 }
 
 
 /* tablet */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
 	main {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -78,9 +90,8 @@ main div img {
 
 /* desktop */
 @media (min-width: 900px) {
-	main {
-		flex-direction: row;
-		flex-wrap: wrap;
+	main div {
+		width: 25%;
 	}
 }
 
