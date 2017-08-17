@@ -32,6 +32,7 @@ form input[type="submit"] {
 	margin-top: 10px;
 	border: 1px black solid;
 	border-radius: 5px;
+	display: block;
 }
 
 main {
@@ -52,12 +53,16 @@ main div {
 	margin: 10px;
 	padding: 10px;
 	border-radius: 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    overflow: hidden;
 }
 
 main div h4 {
 	text-align: center;
 	padding-top: 10px;
 	font-size: 1.3em;
+	padding-bottom: 10px;
 }
 
 main div a {
@@ -72,6 +77,11 @@ main div img {
 	clear: both;
 	padding-bottom: 20px;
 	cursor: pointer;
+	transition: box-shadow ease 0.4s;
+}
+
+main div img:hover {
+	box-shadow: 3px 3px 3px #ddd;
 }
 
 
