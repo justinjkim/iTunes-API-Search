@@ -31,25 +31,62 @@ function callback(e) {
 					.then(function(data) {
 						main.innerHTML = "";
 						let data_copy = data.results;
+						let aud = document.getElementById("aud");
+						let aud_wrapper = document.getElementById("aud_wrapper");
+
 
 						data_copy.map((content) => {
 							let profile = document.createElement("div");
 							let profile_img = document.createElement("img");
 							profile.appendChild(profile_img);
 							profile_img.setAttribute("src", `${content.artworkUrl100}`);
+
+							profile_img.addEventListener("click", function() {
+								aud.setAttribute("src", `${content.previewUrl}`);
+								aud_wrapper.load();
+								aud_wrapper.play();
+							})
+
+							
+
+
+
+
+
+
+
+
+							
+
+
 							let profile_song = document.createElement("a");
-							profile_song.setAttribute("href", `${content.trackName}`);
+							profile_song.setAttribute("href", `${content.trackViewUrl}`);
 							profile_song.innerHTML = `${content.trackName}`;
 							profile.appendChild(profile_song);
+
+
+
 
 							let profile_artist = document.createElement("h4");
 							profile_artist.innerHTML = `${content.artistName}`;
 							profile.appendChild(profile_artist);
 
 							main.appendChild(profile);
+						}) // end of map function
 
+						// let results = document.querySelectorAll("div");
+						// for (let i = 0; i < results.length; i++) {
+						// 	results[i].addEventListener("click", function(e) {
+						// 		if (e.target && e.target.nodeName === "IMG") {
+						// 			aud.setAttribute("src", "piano.m4a");
+						// 			aud_wrapper.load();
+						// 			aud_wrapper.play();
 
-						})
+						// 		}	
+						// 	})
+						// }
+						
+
 					} // end of .then(function(data))
 					)
 			} // end of else statement
