@@ -38,6 +38,7 @@ function callback(e) {
 						data_copy.map((content) => {
 							//create the div wrapper for each search result
 							let profile = document.createElement("div");
+					
 							let profile_img = document.createElement("img");
 							profile.appendChild(profile_img);
 							profile_img.setAttribute("src", `${content.artworkUrl100}`);
